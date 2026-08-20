@@ -1,13 +1,13 @@
 interface:
-  display_name: 专业分镜生成
-  short_description: 联合剧本与场景图，生成可拍摄且连续的专业分镜
-  default_prompt: 使用 $pogginxbzz-shooting-script，依据我上传的剧本和场景图生成专业分镜。
-  icon_small: assets/icon.svg
-  icon_large: assets/icon.svg
+  display_name: "Seedance 2.5/2.0 专业分镜"
+  short_description: "把剧本与场景图切成连续分镜和可复制的 Seedance 提示词"
+  default_prompt: "使用 $pogginxbzz-shooting-script，将我提供的剧本和场景参考图拆成母版分镜、生成批次与 Seedance 提示词。"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
 policy:
   products:
-  - chatgpt
-  - codex
-  - api
-  - atlas
+    - "chatgpt"
+    - "codex"
+    - "api"
+    - "atlas"
   allow_implicit_invocation: true
