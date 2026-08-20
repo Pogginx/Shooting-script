@@ -23,6 +23,12 @@
 
 ## Seedance 2.5 配置
 
+### 事实分级
+
+- **官方硬能力**：只采用字节 Seed/BytePlus 当前官方资料直接说明的能力；当前已核实的是单次最长 30 秒、多轮延长、最多 30 图/10 视频/10 音频、时间戳编辑和多模态参考。
+- **入口能力**：超长视频、具体分辨率、编辑模式名称、单素材大小/时长等可能随即梦、豆包或 API 入口变化；必须读取用户当前界面或最新官方页面后再写成限制。
+- **稳定性建议**：镜头密度、素材优先级、提示词长度和多人复杂度属于实践建议，只能作为风险提示，不能伪装成平台上限。
+
 ### 已核实能力
 
 - 单次可生成最长 30 秒的音视频内容，并支持多轮延长。
@@ -33,6 +39,14 @@
 - 编辑任务应写清目标、A→B 的变化、生效时间和保持不变的内容。
 - 多宫格分镜更适合 15 格以内，只提供大体剧情与镜头参考；若要求严格镜头对齐，将每格作为独立关键帧并按顺序引用。
 - 复杂动作与多主体互动仍有物理合理性和稳定性风险，应控制同一时间段的事件密度。
+
+### 模式路由
+
+- 新建 4–30 秒内容：使用标准生成；精确到秒的复杂 30 秒内容仍优先标准生成加完整时间线。
+- 延长已认可的视频：提示词只描述新增部分，并记录原视频尾帧的角色位置、动作动量、镜头运动、光线和声音。
+- 30 秒以上的专用“超长视频”入口：只有当前界面或官方资料明确提供时才使用其实际范围；否则采用 30 秒生成单元和多轮延长。
+- 局部修改：写清定位对象、A→B 变化、生效时间和保持不变内容；不要重写整段视频。
+- 多宫格：先映射每格职责；要求严格构图时拆成独立关键帧，不把多宫格当逐帧控制。
 
 ### 切割策略
 
@@ -92,6 +106,7 @@
 - [dexhunter/seedance2-skill](https://github.com/dexhunter/seedance2-skill)：2.0 提示词技能，约 3.4k stars。
 - [liangdabiao/Seedance2-Storyboard-Generator](https://github.com/liangdabiao/Seedance2-Storyboard-Generator)：2.0 剧本—资产—分镜流程，约 2.1k stars。
 - [elementsix/elementsix-skills](https://github.com/elementsix/elementsix-skills)：2.0 分镜模板，约 300 stars。
-- [woodfantasy/Seedance-ShotDesign-Skills](https://github.com/woodfantasy/Seedance-ShotDesign-Skills)：活跃的 2.5 镜头设计技能，约 100 stars。
+- [woodfantasy/Seedance-ShotDesign-Skills](https://github.com/woodfantasy/Seedance-ShotDesign-Skills)：活跃的 2.5 镜头设计技能，2026-08-20 约 104 stars；用于吸收模式路由、素材职责和校验思路。
+- [AtlasCloudAI/awesome-seedance-2.5-prompts-skills](https://github.com/AtlasCloudAI/awesome-seedance-2.5-prompts-skills)：近期 2.5 提示词与 Agent Skill 集合；用于观察新入口和案例，不作为硬限制来源。
 
 星标数量只用于说明研究样本的社区采用度，不应进入生成规则。
