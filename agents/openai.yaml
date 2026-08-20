@@ -1,7 +1,7 @@
 interface:
   display_name: "Seedance 2.5/2.0 专业分镜"
-  short_description: "把剧本与场景图切成连续分镜和可复制的 Seedance 提示词"
-  default_prompt: "使用 $pogginxbzz-shooting-script，将我提供的剧本和场景参考图拆成母版分镜、生成批次与 Seedance 提示词。"
+  short_description: "把剧本切成连续分镜、对白覆盖和可复制的详细拍摄提示词"
+  default_prompt: "使用 $pogginxbzz-shooting-script，将我提供的剧本和场景参考图拆成母版分镜、对白主镜头与过肩反应覆盖、生成批次和可复制的详细逐镜提示词。"
   icon_small: "./assets/icon.svg"
   icon_large: "./assets/icon.svg"
 policy:
